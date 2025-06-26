@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import ProductEditForm from "../../../../components/advertisement/ProductEditForm";
 
 // Sample data - in a real app, this would come from an API
@@ -12,7 +12,7 @@ const sampleProducts = [
     category: "Mens",
     heading: "Classic T-Shirt",
     content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sit Cras Duis Ac Fermentum At Urna, Dictumst Ultricies Tortor. Adipiscing Sed Urna, Neque Posuere Aliquam Porttitor At.",
-    images: "data/man.jpg"
+    images: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "ad-2",
@@ -20,7 +20,7 @@ const sampleProducts = [
     category: "Women",
     heading: "Relaxed Fit Hoodie",
     content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sit Cras Duis Ac Fermentum At Urna, Dictumst Ultricies Tortor. Adipiscing Sed Urna, Neque Posuere Aliquam Porttitor At.",
-    images: "data/man.jpg"
+    images: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "ad-3",
@@ -28,7 +28,7 @@ const sampleProducts = [
     category: "Kids",
     heading: "Kids Casual Wear",
     content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sit Cras Duis Ac Fermentum At Urna, Dictumst Ultricies Tortor. Adipiscing Sed Urna, Neque Posuere Aliquam Porttitor At.",
-    images: "data/man.jpg"
+    images: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "ad-4",
@@ -36,16 +36,17 @@ const sampleProducts = [
     category: "Others",
     heading: "Accessories",
     content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sit Cras Duis Ac Fermentum At Urna, Dictumst Ultricies Tortor. Adipiscing Sed Urna, Neque Posuere Aliquam Porttitor At.",
-    images: "data/man.jpg"
+    images: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ];
 
-export default function EditProductPage() {
+function EditProductContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const productId = searchParams.get('id');
   
   const [product, setProduct] = useState(null);
+  
   useEffect(() => {
     if (productId) {
       // In a real app, fetch from API
@@ -89,5 +90,19 @@ export default function EditProductPage() {
         onCancel={handleCancel}
       />
     </div>
+  );
+}
+
+export default function EditProductPage() {
+  return (
+    <Suspense fallback={
+      <div className="p-6">
+        <div className="text-center">
+          <div className="text-lg font-medium">Loading...</div>
+        </div>
+      </div>
+    }>
+      <EditProductContent />
+    </Suspense>
   );
 }
