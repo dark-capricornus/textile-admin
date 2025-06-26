@@ -1,36 +1,194 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Textile Admin Dashboard
 
-## Getting Started
+A comprehensive admin dashboard for textile business management built with Next.js and React.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Pages
+- **Dashboard** (`/`) - Main overview with business metrics and analytics
+- **Upload Products** (`/upload`) - Product management with bulk upload capabilities
+- **Orders** (`/orders`) - Order tracking and management system
+- **Delivery Tracking** (`/delivery-tracking`) - Real-time delivery status monitoring
+- **Stocks** (`/stocks`) - Inventory management and stock levels
+- **Expense** (`/expense`) - Financial expense tracking
+- **Reviews & Ratings** (`/reviews`) - Customer feedback management
+- **Advertisement** (`/advertisement`) - Marketing campaign management
+
+### Core Features
+
+#### Product Management
+- Add new products with detailed information
+- Color picker and size selection
+- Image upload with preview
+- Status management (Active/Inactive/Out of Stock)
+- Product confirmation workflow
+- Real-time table updates
+
+#### Order Processing
+- Order status tracking
+- Customer information management
+- Invoice generation
+- Payment status monitoring
+
+#### Delivery Tracking
+- Shipment tracking integration
+- Delivery partner management
+- Real-time status updates
+- Customer notification system
+
+#### Inventory Control
+- Stock level monitoring
+- Low stock alerts
+- Category-based filtering
+- Search functionality
+
+### Technical Implementation
+
+#### Frontend Stack
+- **Next.js 14** - React framework with App Router
+- **React 18** - Component-based UI library
+- **Tailwind CSS** - Utility-first styling framework
+
+#### Components Architecture
+- **Reusable UI Components** - Pagination, modals, forms
+- **Layout Components** - Sidebar navigation, header
+- **Feature Components** - Product forms, data tables
+- **State Management** - React hooks for local state
+
+#### Data Management
+- **JSON Data Files** - Static data for products, orders, delivery
+- **Client-side Filtering** - Search and category filtering
+- **Pagination** - Efficient data presentation
+- **Form Validation** - Input validation and error handling
+
+### Key Functionalities
+
+#### Product Workflow
+1. Product form with comprehensive details
+2. Image upload and preview
+3. Confirmation page with review
+4. Status-based categorization
+5. Table integration with real-time updates
+
+#### Order Management
+- Order listing with status indicators
+- Customer details and contact information
+- Payment tracking and invoice management
+- Delivery coordination
+
+#### Tracking System
+- Delivery status monitoring
+- Tracking ID management
+- Delivery partner integration
+- Customer communication tools
+
+#### Advertisement Management
+- Campaign creation and editing
+- Product showcasing
+- Category-based organization
+- Performance tracking
+
+### File Structure
+```
+textile-admin/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── dashboard/
+│   │   ├── upload/
+│   │   ├── orders/
+│   │   ├── delivery-tracking/
+│   │   ├── stocks/
+│   │   ├── expense/
+│   │   ├── reviews/
+│   │   └── advertisement/
+│   └── components/             # Reusable components
+│       ├── ui/
+│       ├── orders/
+│       └── forms/
+├── data/                       # JSON data files
+│   ├── productsData.json
+│   ├── ordersData.json
+│   └── deliveryData.json
+├── public/                     # Static assets
+└── components/                 # Shared components
+    ├── Navbar.jsx
+    ├── Sidebar.jsx
+    ├── ProductForm.jsx
+    └── ui/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development Setup
+```bash
+# Install dependencies
+npm install
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Run development server
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
-## Learn More
+### Build for Production
+```bash
+# Create production build
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Features Overview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Dashboard Analytics
+- Revenue tracking and charts
+- Sales performance metrics
+- Order status overview
+- Inventory alerts
 
-## Deploy on Vercel
+#### Product Management System
+- Multi-step product creation
+- Image gallery with upload
+- Variant management (colors, sizes)
+- Stock level tracking
+- Category organization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Order Processing Pipeline
+- Order status workflow
+- Customer information capture
+- Payment status tracking
+- Invoice generation
+- Delivery coordination
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Delivery Tracking Interface
+- Real-time tracking updates
+- Delivery partner management
+- Customer notification system
+- Tracking ID assignment
+- Status monitoring dashboard
+
+#### Inventory Management
+- Stock level monitoring
+- Category-based organization
+- Search and filter capabilities
+- Low stock alerts
+- Bulk operations
+
+#### Financial Tracking
+- Expense categorization
+- Revenue analytics
+- Profit margin calculations
+- Financial reporting
+
+#### Customer Feedback System
+- Review collection
+- Rating aggregation
+- Response management
+- Quality insights
+
+#### Marketing Tools
+- Advertisement campaign management
+- Product showcase creation
+- Performance analytics
+- Customer targeting
+
+This is a frontend-only application designed for comprehensive textile business administration with advanced product, order, delivery, and inventory management capabilities.
