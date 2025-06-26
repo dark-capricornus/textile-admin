@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/advertisement/edit/page": "/advertisement/edit",
+  "/advertisement/page": "/advertisement",
+  "/advertisements/page": "/advertisements",
+  "/dashboard/page": "/dashboard",
+  "/delivery-tracking/page": "/delivery-tracking",
+  "/expense/page": "/expense",
+  "/orders/[id]/page": "/orders/[id]",
+  "/orders/page": "/orders",
+  "/page": "/",
+  "/stocks/add-product/page": "/stocks/add-product",
+  "/reviews/page": "/reviews",
+  "/stocks/page": "/stocks",
+  "/upload/page": "/upload"
+}

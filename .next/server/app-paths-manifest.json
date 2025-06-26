@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/advertisement/edit/page": "app/advertisement/edit/page.js",
+  "/advertisement/page": "app/advertisement/page.js",
+  "/advertisements/page": "app/advertisements/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/delivery-tracking/page": "app/delivery-tracking/page.js",
+  "/expense/page": "app/expense/page.js",
+  "/orders/[id]/page": "app/orders/[id]/page.js",
+  "/orders/page": "app/orders/page.js",
+  "/page": "app/page.js",
+  "/stocks/add-product/page": "app/stocks/add-product/page.js",
+  "/reviews/page": "app/reviews/page.js",
+  "/stocks/page": "app/stocks/page.js",
+  "/upload/page": "app/upload/page.js"
+}
